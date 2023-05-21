@@ -1,0 +1,26 @@
+﻿@page
+@model FormularAPI.Models.Amount
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de pago</title>
+</head>
+<body>
+    <form asp-controller="Home" asp-action="ProcessPayment" method="post">
+        <label asp-for="transID">TRANSID:</label>
+        <input asp-for="transID" type="text" asp-for="transID" /><br />
+
+        <label asp-for="amount">AMOUNT:</label>
+        <input asp-for="amount" type="text" asp-for="amount" /><br />
+
+        <label asp-for="currency">CURRENCY:</label>
+        <input asp-for="currency" type="text" asp-for="currency" /><br />
+
+        <input type="submit" value="CONFIRM" />
+    </form>
+</body>
+</html>
